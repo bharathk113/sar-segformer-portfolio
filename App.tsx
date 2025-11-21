@@ -14,7 +14,7 @@ export default function App() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [wordIndex, setWordIndex] = useState(0);
   
-  const words = ["Noise", "Clouds", "Darkness", "Speckle"];
+  const words = ["Haze", "Clouds", "Speckle", "Rain"];
 
   // Typewriter Effect
   useEffect(() => {
@@ -225,7 +225,7 @@ export default function App() {
         <div className="absolute top-0 left-0 w-full h-full sar-noise opacity-10 pointer-events-none"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <span className="text-cyan-400 font-bold tracking-widest uppercase text-sm mb-2 block">Live Visualization</span>
+            <span className="text-cyan-400 font-bold tracking-widest uppercase text-sm mb-2 block">Sample Visualization</span>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               See the Algorithm in Action
             </h2>
@@ -238,8 +238,8 @@ export default function App() {
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                <span className="bg-cyan-500/20 text-cyan-400 text-xs px-2 py-1 rounded border border-cyan-500/30">Fig 3</span>
-                Complex River Network
+                <span className="bg-cyan-500/20 text-cyan-400 text-xs px-2 py-1 rounded border border-cyan-500/30">Fig 1</span>
+                Complex scenario with thin ice-sheet over lakes
               </h3>
               {/* Using relative paths without leading slash */}
               <CompareSlider 
@@ -249,13 +249,13 @@ export default function App() {
                 afterSrc="assets/fig3_mask.png"
               />
               <p className="mt-4 text-slate-400 text-sm">
-                Demonstrates capability to extract fine river channels despite low spatial resolution (18m) and speckle noise.
+                Demonstrates capability to extract lakes covered with thin layer of ICE and speckle noise.
               </p>
             </div>
 
             <div>
               <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                 <span className="bg-cyan-500/20 text-cyan-400 text-xs px-2 py-1 rounded border border-cyan-500/30">Fig 5</span>
+                 <span className="bg-cyan-500/20 text-cyan-400 text-xs px-2 py-1 rounded border border-cyan-500/30">Fig 2</span>
                  Small Water Bodies
               </h3>
               <CompareSlider 
@@ -292,7 +292,7 @@ export default function App() {
             <p className="text-slate-500 text-sm mt-1">Water Resources Group (WRG), NRSC</p>
           </div>
           <div className="text-slate-600 text-sm">
-            &copy; 2025 National Remote Sensing Centre. All rights reserved.
+            &copy; 2025 Bharath Kumar Reddy K. All rights reserved.
           </div>
         </div>
       </footer>
