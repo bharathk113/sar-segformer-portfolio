@@ -57,7 +57,8 @@ export default function App() {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
-          if (rect.top >= 0 && rect.top <= 300) {
+          // Adjusted detection range
+          if (rect.top >= -100 && rect.top <= 300) {
             setActiveSection(section);
             break;
           }
@@ -73,7 +74,7 @@ export default function App() {
       <Navbar activeSection={activeSection} scrollToSection={scrollToSection} />
 
       {/* Hero Section */}
-      <section id="hero" className="relative min-h-screen flex items-center pt-16 overflow-hidden">
+      <section id="hero" className="relative min-h-screen flex items-center pt-16 overflow-hidden scroll-mt-20">
         {/* Backgrounds */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-cyan-900/20 via-slate-950 to-slate-950 z-0" />
         <NeuralBackground />
@@ -104,7 +105,7 @@ export default function App() {
       </section>
 
       {/* Context / Problem Section */}
-      <section id="context" className="py-24 bg-slate-950 relative border-t border-slate-900">
+      <section id="context" className="py-24 bg-slate-950 relative border-t border-slate-900 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -159,7 +160,7 @@ export default function App() {
       </section>
 
       {/* Methodology / Architecture */}
-      <section id="methodology" className="py-24 bg-slate-950 relative">
+      <section id="methodology" className="py-24 bg-slate-950 relative scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -206,7 +207,7 @@ export default function App() {
       </section>
 
       {/* Results Section */}
-      <section id="results" className="py-24 bg-slate-950 border-t border-slate-900">
+      <section id="results" className="py-24 bg-slate-950 border-t border-slate-900 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <div className="mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -221,7 +222,7 @@ export default function App() {
       </section>
 
       {/* Interactive Demo Section */}
-      <section id="demo" className="py-24 bg-slate-900 relative overflow-hidden">
+      <section id="demo" className="py-24 bg-slate-900 relative overflow-hidden scroll-mt-20">
         <div className="absolute top-0 left-0 w-full h-full sar-noise opacity-10 pointer-events-none"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
@@ -281,6 +282,20 @@ export default function App() {
               Download ATBD PDF <Download size={18} />
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* Model Coming Soon Banner */}
+      <section className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border-t border-slate-800 py-10">
+        <div className="max-w-7xl mx-auto px-4 text-center">
+            <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/20 px-4 py-2 rounded-full mb-4">
+               <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+               <span className="text-cyan-400 font-bold text-sm uppercase tracking-wider">Coming Soon</span>
+            </div>
+            <p className="text-slate-300 text-lg">
+              Pre-trained model weights and inference scripts will be made available for download here soon. <br className="hidden md:block"/> 
+              <span className="text-white font-semibold">Stay tuned for updates!</span>
+            </p>
         </div>
       </section>
 
