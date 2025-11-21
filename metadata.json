@@ -1,0 +1,5 @@
+{
+  "name": "SAR SegFormer Portfolio",
+  "description": "Interactive portfolio showcase for the Radiometrically Agnostic SegFormer Framework for Water Segmentation in SAR Imagery.",
+  "requestFramePermissions": []
+}
